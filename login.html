@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===============================================-->
+  <!--    Document Title                              -->
+  <!-- ===============================================-->
+  <title>Foodwagon | Iniciar Sesión</title>
+
+  <!-- ===============================================-->
+  <!--    Favicons                                    -->
+  <!-- ===============================================-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- ===============================================-->
+  <!--    Stylesheets                                 -->
+  <!-- ===============================================-->
+  <link href="assets/css/theme.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #FFF8EF;
+      font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .login-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .login-card {
+      background: #ffffff;
+      border-radius: 1.25rem;
+      box-shadow: 0 15px 35px rgba(255, 179, 14, 0.15), 0 5px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(255, 179, 14, 0.2);
+      overflow: hidden;
+      width: 100%;
+      max-width: 450px;
+      transition: all 0.3s ease;
+    }
+
+    .login-header {
+      background: linear-gradient(135deg, #FFB30E 0%, #F54748 100%);
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
+      color: #ffffff;
+      position: relative;
+    }
+
+    .login-header .logo-icon {
+      width: 60px;
+      height: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      margin-bottom: 1rem;
+      color: #F54748;
+      font-size: 1.8rem;
+    }
+
+    .btn-foodwagon {
+      background: linear-gradient(135deg, #FFB30E 0%, #F54748 100%);
+      color: #ffffff;
+      border: none;
+      font-weight: 700;
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 12px rgba(245, 71, 72, 0.3);
+      transition: all 0.25s ease;
+    }
+
+    .btn-foodwagon:hover {
+      background: linear-gradient(135deg, #f0a300 0%, #e03637 100%);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(245, 71, 72, 0.4);
+    }
+
+    .social-btn {
+      border: 1px solid #E0E0E0;
+      border-radius: 0.75rem;
+      padding: 0.65rem 1rem;
+      font-weight: 600;
+      color: #4A4A4A;
+      background: #FFFFFF;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    .social-btn:hover {
+      background: #F9F9F9;
+      border-color: #CCCCCC;
+      color: #212121;
+    }
+
+    .divider-text {
+      position: relative;
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    .divider-text::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #E5E5E5;
+      z-index: 1;
+    }
+
+    .divider-text span {
+      position: relative;
+      background: #ffffff;
+      padding: 0 0.75rem;
+      color: #8C8C8C;
+      font-size: 0.875rem;
+      z-index: 2;
+    }
+
+    .form-control:focus {
+      border-color: #FFB30E;
+      box-shadow: 0 0 0 0.25rem rgba(255, 179, 14, 0.25);
+    }
+
+    .input-group-text {
+      background-color: #FFF9F0;
+      border-color: #ced4da;
+      color: #FFB30E;
+    }
+
+    .brand-title {
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===============================================-->
+  <!--    Main Content                                -->
+  <!-- ===============================================-->
+  <main class="main" id="top">
+    
+    <!-- Navbar simple para volver -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 bg-white shadow-sm" data-navbar-on-scroll="data-navbar-on-scroll">
+      <div class="container">
+        <a class="navbar-brand d-inline-flex align-items-center me-5" href="index.html">
+          <img class="d-inline-block me-2" src="assets/img/gallery/logo.svg" alt="logo" height="32" />
+          <span class="text-1000 fs-3 fw-bold ms-2 text-gradient">food<span class="text-primary">wagon</span></span>
+        </a>
+        <div class="ms-auto">
+          <a class="btn btn-outline-warning text-dark fw-bold rounded-pill px-4" href="index.html">
+            <i class="bi bi-arrow-left me-1"></i> Volver al Inicio
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Container -->
+    <div class="login-container pt-7">
+      <div class="login-card">
+        
+        <!-- Header del Formulario -->
+        <div class="login-header">
+          <div class="logo-icon">
+            <i class="bi bi-bag-heart-fill"></i>
+          </div>
+          <h3 class="text-white brand-title mb-1">¡Bienvenido de nuevo!</h3>
+          <p class="text-white-50 mb-0 fs--1">Ingresa a tu cuenta para pedir tus platillos favoritos</p>
+        </div>
+
+        <!-- Cuerpo del Formulario -->
+        <div class="p-4 p-sm-5">
+          
+          <!-- Botones Redes Sociales -->
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <a href="#" class="social-btn btn-sm">
+                <i class="bi bi-google text-danger fs-5"></i> Google
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="#" class="social-btn btn-sm">
+                <i class="bi bi-facebook text-primary fs-5"></i> Facebook
+              </a>
+            </div>
+          </div>
+
+          <div class="divider-text">
+            <span>o con tu correo</span>
+          </div>
+
+          <!-- Formulario -->
+          <form id="loginForm" onsubmit="handleLogin(event)">
+            
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label text-800 fw-bold fs--1">Correo Electrónico</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                <input type="email" class="form-control form-control-lg fs--1" id="email" placeholder="ejemplo@correo.com" required>
+              </div>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <label for="password" class="form-label text-800 fw-bold fs--1 mb-0">Contraseña</label>
+                <a href="#" class="text-primary text-decoration-none fs--2 fw-semibold">¿Olvidaste tu contraseña?</a>
+              </div>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                <input type="password" class="form-control form-control-lg fs--1" id="password" placeholder="••••••••" required>
+                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Recordarme -->
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+              <label class="form-check-label text-700 fs--1" for="rememberMe">
+                Recordar mi sesión en este dispositivo
+              </label>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn btn-foodwagon w-100 fs-0 mb-3">
+              <i class="bi bi-box-arrow-in-right me-2"></i> Iniciar Sesión
+            </button>
+          </form>
+
+          <!-- Registrarse -->
+          <div class="text-center mt-4">
+            <p class="text-700 fs--1 mb-0">
+              ¿Aún no tienes una cuenta? 
+              <a href="#" class="text-danger fw-bold text-decoration-none ms-1">Regístrate gratis</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===============================================-->
+  <!--    JavaScripts                                 -->
+  <!-- ===============================================-->
+  <script src="vendors/@popperjs/popper.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/is/is.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+  <script src="vendors/fontawesome/all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+
+  <script>
+    // Mostrar / Ocultar contraseña
+    document.getElementById('togglePassword').addEventListener('click', function () {
+      const passwordInput = document.getElementById('password');
+      const icon = this.querySelector('i');
+      
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        icon.classList.remove('bi-eye');
+        icon.classList.add('bi-eye-slash');
+      } else {
+        passwordInput.type = 'password';
+        icon.classList.remove('bi-eye-slash');
+        icon.classList.add('bi-eye');
+      }
+    });
+
+    // Manejo simple de submit
+    function handleLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      alert('¡Bienvenido a Foodwagon! Sesión iniciada correctamente con: ' + email);
+      window.location.href = 'index.html';
+    }
+  </script>
+
+</body>
+
+</html>
